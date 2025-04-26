@@ -16,7 +16,7 @@ body {
 
   @each $key, $value in $week-days {
     &--start-day-#{$key} .calendar__day:nth-child(1) {
-      margin-left: $value * ($square-size + $gap-size);
+      margin-left: calc(#{$value} * (#{$square-size} + #{$gap-size}));
     }
   }
 
